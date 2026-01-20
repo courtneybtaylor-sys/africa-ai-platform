@@ -1,5 +1,8 @@
 "use client";
 
+// Force dynamic rendering - env vars not available at build time
+export const dynamic = 'force-dynamic';
+
 import React from "react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
