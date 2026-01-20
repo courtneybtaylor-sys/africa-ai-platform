@@ -36,11 +36,8 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-export async function generateStaticParams() {
-  return cities.map((city) => ({
-    id: city.id,
-  }));
-}
+// Dynamic rendering - skip prerendering to avoid build errors
+export const dynamic = 'force-dynamic';
 
 interface PageProps {
   params: Promise<{ id: string }>;
