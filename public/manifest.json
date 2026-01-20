@@ -1,0 +1,44 @@
+{
+  "name": "Africa AI - Your AI Guide to the Motherland",
+  "short_name": "Africa AI",
+  "description": "Discover, relocate, and thrive across Africa's 54 nations with AI-powered travel planning and visa guidance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#D4A853",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["travel", "lifestyle", "utilities"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Trip Planner",
+      "url": "/planner",
+      "description": "Plan your African adventure"
+    },
+    {
+      "name": "Visa Checker",
+      "url": "/visa",
+      "description": "Check visa requirements"
+    },
+    {
+      "name": "Explore Countries",
+      "url": "/countries",
+      "description": "Discover Africa's 54 nations"
+    }
+  ]
+}
