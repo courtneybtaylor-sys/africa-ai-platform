@@ -54,20 +54,21 @@ export default async function CityDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const renderStars = (rating: number) => {
+  const renderStars = (rating?: number) => {
+    const safeRating = rating ?? 0;
     return (
       <div className="flex items-center gap-1">
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
             className={`h-4 w-4 ${
-              star <= Math.round(rating)
+              star <= Math.round(safeRating)
                 ? "fill-safari text-safari"
                 : "text-muted-foreground/30"
             }`}
           />
         ))}
-        <span className="ml-1 text-sm font-medium">{rating.toFixed(1)}</span>
+        <span className="ml-1 text-sm font-medium">{safeRating.toFixed(1)}</span>
       </div>
     );
   };
@@ -169,7 +170,7 @@ export default async function CityDetailPage({ params }: PageProps) {
                 <Calendar className="h-5 w-5 text-kente" />
                 <div>
                   <p className="text-xs text-muted-foreground">Best Time</p>
-                  <p className="font-semibold text-foreground text-sm">{city.bestTimeToVisit.split(" ")[0]}</p>
+                  <p className="font-semibold text-foreground text-sm">{city.bestTimeToVisit?.split(" ")[0] || "Year-round"}</p>
                 </div>
               </div>
             </div>
